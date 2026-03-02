@@ -11,8 +11,8 @@
 :root {
     --crimson-primary: #ff0000a2;
     --crimson-hover: #cc0000;
-    --crimson-light: #ff4d4d;
-    --crimson-glow: rgba(255, 0, 0, 0.5);
+    --crimson-light: #ff0000;
+    --crimson-glow: rgb(255, 255, 255);
     --background-primary: #000000;
     --background-secondary: #0a0a0a;
     --background-secondary-alt: #0f0f0f;
@@ -260,7 +260,7 @@ h1[class*="label"],
 
 [class*="memberInner"]:hover [class*="username"],
 [class*="memberInner"]:hover [class*="name"] {
-    text-shadow: 0 0 8px var(--crimson-light) !important;
+    text-shadow: 0 0 8px var(--crimson-glow) !important;
 }
 
 [class*="childWrapper"] svg path { fill: var(--crimson-primary) !important; }
