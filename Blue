@@ -1,0 +1,419 @@
+/**
+ * @name Discord Crimson Theme
+ * @author MrBambo
+ * @version 1.0.0
+ * @description Crimson discord
+ * @source https://github.com/MrBambo318/Discord-Crimson-theme
+ * @website https://github.com/MrBambo318/Discord-Crimson-theme
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --crimson-primary: #060afaa2;
+    --crimson-hover: #1400cc;
+    --crimson-light: #0400ff;
+    --crimson-glow: rgb(255, 255, 255);
+    --crimson-lajt: #020000;
+    --background-primary: #000000;
+    --background-secondary: #0a0a0a;
+    --background-secondary-alt: #0f0f0f;
+    --background-tertiary: #080808;
+    --background-accent: #111111;
+    --background-floating: #0c0c0c;
+    --background-mobile-primary: #000000;
+    --background-mobile-secondary: #0a0a0a;
+    --background-modifier-hover: rgba(255, 10, 10, 0.1);
+    --background-modifier-active: rgba(255, 10, 10, 0.15);
+    --background-modifier-selected: rgba(255, 10, 10, 0.2);
+    --background-modifier-accent: rgba(255, 255, 255, 0.06);
+    --text-normal: #001aff;
+    --text-muted: #534d4d;
+    --text-link: var(--crimson-light);
+    --header-primary: #ffffff;
+    --header-secondary: #ffffff;
+    --interactive-normal: #b0b0b0;
+    --interactive-hover: #e0e0e0;
+    --interactive-active: #ffffff;
+    --interactive-muted: #4a4a4a;
+    --channels-default: #949ba4;
+    --channel-icon: #949ba4;
+    --brand-experiment: var(--crimson-primary);
+    --brand-experiment-560: var(--crimson-primary);
+    --brand-experiment-600: var(--crimson-hover);
+    --scrollbar-thin-thumb: var(--crimson-primary);
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: var(--crimson-primary);
+    --scrollbar-auto-track: #0a0a0a;
+    --elevation-stroke: rgba(255, 10, 10, 0.1);
+    --input-background: #0f0f0f;
+    --deprecated-card-bg: rgba(10, 10, 10, 0.9);
+    --activity-card-background: #0a0a0a;
+    --modal-background: #0a0a0a;
+    --modal-footer-background: #080808;
+}
+
+* { font-family: 'Inter', sans-serif !important; }
+code, code * { font-family: 'JetBrains Mono', 'Consolas', monospace !important; }
+
+::selection, ::-moz-selection {
+    background: rgba(174, 0, 255, 0.4) !important;
+    color: #ffffff !important;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0a0a0a; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: var(--crimson-primary); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--crimson-light); }
+
+a { color: var(--crimson-light) !important; }
+a:hover { text-decoration: underline !important; }
+
+[class*="lookFilled"][class*="colorBrand"],
+[class*="lookFilled"][class*="colorGreen"] {
+    background-color: var(--crimson-primary) !important;
+    box-shadow: 0 0 10px var(--crimson-lajt) !important;
+}
+
+[class*="lookFilled"][class*="colorBrand"]:hover,
+[class*="lookFilled"][class*="colorGreen"]:hover {
+    background-color: var(--crimson-hover) !important;
+}
+
+.mention {
+    background-color: rgba(26, 10, 255, 0.2) !important;
+    color: var(--crimson-light) !important;
+}
+.mention:hover {
+    background-color: rgba(34, 10, 255, 0.4) !important;
+    color: #ffffff !important;
+}
+
+[class*="mentioned"] {
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.12) 0%, rgba(255, 0, 0, 0.03) 100%) !important;
+    border-left: none !important;
+}
+[class*="mentioned"]:hover {
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.18) 0%, rgba(255, 0, 0, 0.06) 100%) !important;
+}
+[class*="mentioned"]::before {
+    background-color: rgb(255, 255, 255) !important;
+    width: 3px !important;
+}
+
+[class*="reaction"]:not([class*="reactions"]):not([class*="reactionCount"]):hover {
+    background-color: rgba(255, 10, 10, 0.15) !important;
+    border-color: var(--crimson-primary) !important;
+    border-radius: 6px !important;
+}
+
+[class*="searchBar"] { background-color: #0a0a0a !important; }
+[class*="titleBar"] { background-color: #000000 !important; }
+
+[class*="tooltip"], [class*="tooltipContent"] {
+    background-color: #0a0a0a !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+[class*="tooltip"][class*="primary"],
+[class*="tooltip"][class*="guild"] {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+[class*="pill"] [class*="item"] { background-color: var(--crimson-primary) !important; }
+
+[class*="numberBadge"],
+[class*="mentionsBadge"] {
+    background-color: var(--crimson-primary) !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    animation: crimson-pulse 2s infinite;
+}
+
+[class*="divider"],
+[class*="separator"] {
+    background: rgba(255, 0, 0, 0.2) !important;
+    border: none !important;
+}
+
+[class*="barFill"],
+[class*="progress"] [class*="bar"] {
+    background: linear-gradient(90deg, #1100ff, #594dff, #0004ff) !important;
+    background-size: 200% 100% !important;
+    animation: gradient-move 2s ease infinite !important;
+}
+
+[class*="embedFull"] {
+    background-color: #0a0a0a !important;
+    border-radius: 12px !important;
+    border-left: 3px solid var(--crimson-primary) !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+}
+[class*="embedFull"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(25, 0, 255, 0.2) !important;
+}
+[class*="embedPill"] {
+    width: 4px !important;
+    border-radius: 4px 0 0 4px !important;
+}
+[class*="embedFull"] [class*="embedDescription"],
+[class*="embedFull"] [class*="embedTitle"],
+[class*="embedFull"] [class*="embedFieldValue"],
+[class*="embedFull"] [class*="embedFieldName"],
+[class*="embedFull"] [class*="embedAuthorName"] {
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+}
+
+[class*="rtcConnectionStatus"][class*="connected"] { color: var(--crimson-primary) !important; }
+
+h2[class*="container"] [class*="name"],
+[class*="categoryItem"] [class*="name"],
+[aria-label*="category" i] [class*="name"] {
+    color: var(--crimson-primary) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 12px !important;
+}
+
+[class*="containerDefault"] > [class*="iconVisibility"] > [class*="icon"] {
+    color: var(--crimson-primary) !important;
+}
+
+[class*="membersGroup"] {
+    color: var(--crimson-primary) !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    letter-spacing: 0.02em;
+    padding: 8px 0 4px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: baseline !important;
+    line-height: 1 !important;
+}
+
+[class*="link"]:hover,
+[class*="channel"]:hover { text-decoration: none !important; }
+
+[class*="link"]::after,
+[class*="channel"]::after,
+[class*="link"]::before,
+[class*="channel"]::before {
+    display: none !important;
+}
+
+[class*="member"][class*="muted"] [class*="username"],
+[class*="member"][class*="muted"] [class*="name"] {
+    color: #6b6b6b !important;
+    opacity: 0.6 !important;
+}
+[class*="member"][class*="offline"] { opacity: 0.5 !important; }
+[class*="member"][class*="offline"]:hover { opacity: 1 !important; }
+
+[class*="privateChannels"] [class*="name"],
+[class*="channel"][class*="private"] [class*="name"],
+[class*="dmChannel"] [class*="name"],
+[class*="directMessage"] [class*="name"] { color: #ffffff !important; }
+
+[class*="privateChannels"] [class*="nameAndDecorators"] * { color: #ffffffd7 !important; }
+[class*="privateChannels"] [class*="muted"] [class*="nameAndDecorators"] * { color: #6b6b6b !important; }
+
+[class*="guildSeparator"],
+[class*="listItem"] [class*="wrapper"] {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+[class*="switch"][class*="checked"],
+[class*="switch"][class*="valueChecked"],
+[class*="control"][class*="checked"],
+[class*="slider"][class*="checked"],
+input[type="checkbox"]:checked + [class*="slider"],
+input[type="checkbox"]:checked ~ [class*="slider"] {
+    background-color: var(--crimson-primary) !important;
+}
+
+[class*="side"] > div:not([class*="item"]):not([class*="separator"]),
+[class*="side"] > h2,
+[class*="side"] [class*="header"]:not([role="button"]),
+[class*="privateChannels"] [class*="header"] {
+    color: var(--crimson-primary) !important;
+}
+
+[class*="label"][class*="409aa"],
+h1[class*="label"],
+[class*="sectionLabel"] h1,
+[class*="sectionLabel"] [class*="label"] { color: #2f0aff !important; }
+
+[class*="link"][class*="channel"]:hover [class*="name"],
+[class*="link"][class*="channel"][class*="selected"] [class*="name"],
+[class*="containerDefault"] [class*="link"]:hover [class*="name"],
+[class*="containerDefault"] [class*="link"][class*="selected"] [class*="name"],
+[class*="containerDefault"] [class*="mainContent"]:hover [class*="name"],
+[class*="privateChannels"] [class*="interactive"]:hover [class*="name"],
+[class*="privateChannels"] [class*="interactive"][class*="selected"] [class*="name"] {
+    text-shadow: 0 0 8px var(--crimson-light) !important;
+    color: var(--crimson-light) !important;
+}
+
+[class*="memberInner"]:hover [class*="username"],
+[class*="memberInner"]:hover [class*="name"] {
+    text-shadow: 0 0 8px var(--crimson-glow) !important;
+}
+
+[class*="childWrapper"] svg path { fill: var(--crimson-primary) !important; }
+
+[class*="channelTextArea"] [class*="scrollableContainer"] {
+    border-bottom: 2px solid transparent !important;
+    transition: border-color 0.3s ease;
+}
+[class*="channelTextArea"]:focus-within [class*="scrollableContainer"] {
+    border-bottom: 2px solid var(--crimson-primary) !important;
+}
+
+[class*="panels"] {
+    border: 3px solid var(--crimson-primary) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 0 8px rgba(255, 10, 10, 0.15) !important;
+    background: rgba(10, 10, 10, 0.95) !important;
+}
+[class*="panels"] button:hover {
+    background-color: rgba(17, 0, 255, 0.2) !important;
+    color: white !important;
+}
+
+[class*="tutorialContainer"] [class*="wrapper"]:hover [class*="childWrapper"] svg {
+    transform: rotate(360deg);
+    transition: transform 0.6s ease-in-out;
+}
+
+[class*="cozyMessage"] {
+    border-left: 2px solid transparent !important;
+    border-radius: 0 8px 8px 0 !important;
+    margin-left: 5px !important;
+    transition: all 0.2s ease !important;
+}
+[class*="cozyMessage"]:hover {
+    border-left: 3px solid var(--crimson-primary) !important;
+    background: rgba(248, 248, 248, 0.03) !important;
+}
+
+[class*="botTag"] {
+    background: linear-gradient(135deg, var(--crimson-primary), var(--crimson-hover)) !important;
+    box-shadow: 0 0 8px rgba(226, 207, 207, 0.384) !important;
+}
+
+[class*="ownerIcon"] {
+    color: var(--crimson-light) !important;
+    filter: drop-shadow(0 0 5px var(--crimson-primary)) !important;
+}
+
+[class*="peopleListItem"] {
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+    border-left: 3px solid transparent !important;
+}
+[class*="peopleListItem"]:hover {
+    background: rgba(255, 0, 0, 0.1) !important;
+    border-left: 3px solid var(--crimson-primary) !important;
+    padding-left: 10px !important;
+}
+
+[class*="menu"],
+[class*="popout"],
+[class*="accountProfilePopout"],
+[class*="userPopout"],
+[class*="section"],
+[class*="card"],
+[class*="scroller"],
+[class*="list"],
+[class*="group"],
+[class*="caret"],
+[class*="arrow"],
+[class*="submenu"] {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+div[class*="layerContainer"] [class*="menu"][role="menu"] {
+    border: 1px solid var(--crimson-primary) !important;
+    box-shadow: 0 0 20px rgba(17, 0, 255, 0.3) !important;
+    border-radius: 12px !important;
+    background: rgba(10, 10, 10, 0.95) !important;
+    padding: 6px !important;
+}
+
+[class*="accountProfilePopoutWrapper"] > div:first-child,
+[class*="userPopoutOuter"] {
+    border: 1px solid var(--crimson-primary) !important;
+    box-shadow: 0 0 20px rgba(4, 0, 255, 0.3) !important;
+    border-radius: 12px !important;
+    background: rgba(10, 10, 10, 0.95) !important;
+}
+
+[class*="accountProfilePopout"] *,
+[class*="userPopout"] *,
+[class*="menu"] * {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+[class*="menu"] [class*="item"] {
+    border-radius: 8px !important;
+    margin: 2px 0 !important;
+}
+[class*="menu"] [class*="item"]:hover { background: rgba(0, 4, 255, 0.15) !important; }
+[class*="menu"] [class*="item"][class*="danger"] { color: var(--crimson-light) !important; }
+
+[class*="account"] [class*="inner"] > div { border: none !important; }
+[class*="account"] [class*="inner"] > div:last-child > div:has([class*="edit"]),
+[class*="account"] [class*="inner"] > div:last-child > div:has([class*="item"]),
+[class*="account"] [class*="inner"] > div:last-child > div:has([class*="menu"]) {
+    border: 1px solid var(--crimson-primary) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 0 20px rgba(0, 17, 255, 0.3) !important;
+}
+[class*="account"] [class*="inner"] > div:last-child > div:has([class*="badge"]),
+[class*="account"] [class*="inner"] > div:last-child > div:has([class*="bio"]),
+[class*="account"] [class*="inner"] > div:last-child > div:has([class*="link"]),
+[class*="account"] [class*="inner"] > div:last-child > div:has([class*="nick"]),
+[class*="account"] [class*="inner"] > div:last-child > div:has([class*="name"]) {
+    border: none !important;
+    box-shadow: none !important;
+}
+[class*="account"] [class*="inner"] [class*="divider"],
+[class*="account"] [class*="inner"] [class*="separator"] {
+    background: transparent !important;
+    margin: 2px 0 !important;
+}
+[class*="accountProfilePopout"] { background: rgba(10, 10, 10, 0.95) !important; }
+
+@keyframes crimson-pulse {
+    0% { box-shadow: 0 0 0 0 var(--crimson-primary); }
+    70% { box-shadow: 0 0 0 6px rgba(255, 0, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+[class*="membersGroup"] span {
+    vertical-align: baseline !important;
+}
+
+[class*="link"][class*="channel"][class*="selected"] [class*="name"],
+[class*="link"][class*="channel"][class*="modeSelected"] [class*="name"],
+a[class*="channel"][class*="selected"] [class*="name"],
+[class*="containerDefault"] [class*="link"][class*="selected"] [class*="name"],
+[class*="containerDefault"] [class*="link"][class*="modeSelected"] [class*="name"],
+[class*="containerDefault"] [class*="iconVisibility"][class*="selected"] [class*="name"] {
+    text-shadow: 0 0 8px var(--crimson-light) !important;
+    color: var(--crimson-light) !important;
+}
